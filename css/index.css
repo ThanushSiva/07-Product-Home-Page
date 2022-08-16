@@ -10,166 +10,310 @@ ul {
 }
 
 body {
-  height: 100vh;
   width: 100vw;
   position: relative;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
+}
+
+.border {
+  border: 1px solid red;
 }
 
 nav {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 80px;
-}
-
-nav .nav-items {
+  padding-inline: 1rem;
+  margin-inline: auto;
+  padding-block: 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-nav .nav-items .nav-item {
-  margin-inline: 60px;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-
-nav .nav-items .nav-item.active-item {
+.active-item {
   color: #f95e38;
 }
 
+.nav-items {
+  display: none;
+}
+
+.svg-items {
+  display: none;
+}
+
 .intro-section {
-  display: grid;
-  grid-template-columns: 55% 45%;
+  width: 100%;
 }
 
-.left-section {
-  padding: 80px;
+.left-section{
+ padding: 1rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
 }
 
-.left-section h3 {
-  margin-top: 30px;
-  font-size: 2rem;
-  font-weight: 400;
+h3 > img{
+  height: 1.5rem;
 }
 
-.left-section h3 img {
-  margin-left: 10px;
-}
-
-.left-section h1 {
-  font-size: 5rem;
+h1{
   font-family: "Fredoka One", sans-serif;
-  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: .1rem;
 }
 
-.sub-headlines {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-left: 100px;
-  margin-top: 50px;
-}
-
-.sub-headline {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
+.sub-headlines{
+  padding-left: 2rem;
 }
 
 .sub-headline img {
-  width: 25px;
-  padding: 3px;
+  width: 0.9rem;
   background: #f95e38;
   border-radius: 50px;
   margin-right: 15px;
 }
 
-.text {
-  width: 900px;
-  margin-top: 80px;
-  color: rgb(163, 159, 159);
+.text{
+  font-size: 0.8rem;
+  text-align: justify;
 }
 
-.action-btns {
-  margin-top: 100px;
+.action-btns{
+  display: flex;
+  justify-content: space-between;
 }
 
 .action-btn {
   border: 0;
   background-color: #f95e38;
-  font-size: 1.6rem;
+  font-size: 0.8rem;
   color: #ffffff;
-  padding: 20px 40px;
-  border-radius: 40px;
-  margin-right: 20px;
+  padding: 1em 2em;
+  border-radius: 5rem;
 }
 
-.right-section {
-  /* background-color: grey; */
+.right-section{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headphone-div{
   position: relative;
+  width: 100%;
 }
 
-.headphone-div {
-  position: relative;
-}
-
-.headphone-div img:nth-child(1) {
-  position: fixed;
-  top: 490px;
-  right: 720px;
-}
-
-.headphone-div img:nth-child(2){
-    position: absolute;
-    top: 0;
+.headphone{
+  width: 100%;
 }
 
 .discount-content{
-    position: fixed;
-    top: 530px;
-    color: #ffffff;
-    right: 750px;
-    text-align: center;
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  color: #fff;
 }
 
-.discount-content h4{
-    font-size: 1rem;
+.discount{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  background: url("../images/discount.svg") no-repeat;
+  background-position: center;
 }
 
-.discount-content h1{
-    font-size: 3.5rem;
+.dummy{
+  position: absolute;
+  top: 40%;
+}
+
+.wrap{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrap h4{
+  font-size: 1rem;
+}
+
+.wrap h1{
+  font-size: 3rem;
 }
 
 .dots{
-    /* background-color: green; */
-    width: 200px;
-    height: 50px;
-    margin-left: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .dot{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
 
 .yellow-dot{
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .tomato-dot{
-    background-color: tomato;
+  background-color: tomato;
 }
 
 .black-dot{
-    background-color: black;
+  background-color: black;
 }
 
-.right-section .action-btn{
-    margin-left: 200px;
-    margin-top: 40px;
+.action-btn-2 {
+  border: 0;
+  background-color: #f95e38;
+  font-size: 0.8rem;
+  color: #ffffff;
+  width: 30%;
+  margin-inline: auto;
+  padding: 1em 2em;
+  border-radius: 5rem;
+}
+
+/* sm */
+@media (min-width: 640px) {
+  nav, .left-section, .right-section{
+    padding-inline: 2rem;
+  }
+  h3 > img{
+    height: 2rem;
+  }
+
+  h3{
+    font-size: 1.8rem;
+  }
+  
+  h1{
+    font-size: 3rem;
+    letter-spacing: .2rem;
+  }
+  .sub-headlines{
+    padding-left: 4rem;
+  }
+  .sub-headline{
+    font-size: 1.2rem;
+  }
+  .sub-headline img {
+    width: 1.2rem;
+  }
+  
+  .text{
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .action-btn, .action-btn-2 {
+    font-size: 1rem;
+  }
+  .right-section{
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .svg-items {
+    display: flex;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  nav{
+    padding-block: 2rem;
+  }
+  .intro-section{
+    display: flex;
+  }
+  .left-section{
+    width: 60%;
+    justify-content: center;
+    height: 86vh;
+    gap: 2rem;
+  }
+  .right-section{
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+  }
+  .action-btn-2{
+    width: 50%;
+  }
+  .headphone{
+    width: 90%;
+  }
+  .headphone-div{
+    display: flex;
+    justify-content: center;
+  }
+  .dummy{
+    left: 0;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    font-size: 1.8rem;
+  }
+  .ham {
+    display: none;
+  }
+  .headphone{
+    width: 90%;
+  }
+  nav, .left-section, .right-section{
+    padding-inline: 8rem;
+  }
+  h3 > img{
+    height: 4rem;
+  }
+
+  h3{
+    font-size: 2.5rem;
+  }
+  
+  h1{
+    font-size: 5rem;
+    letter-spacing: .4rem;
+  }
+  .sub-headlines{
+    padding-left: 10rem;
+  }
+  .sub-headline{
+    font-size: 2rem;
+  }
+  .sub-headline img {
+    width: 1.4rem;
+  }
+  
+  .text{
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  .action-btn, .action-btn-2 {
+    font-size: 1.2rem;
+  }
+  .right-section{
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .dummy{
+    top: 50%;
+  }
 }
